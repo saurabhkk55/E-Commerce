@@ -1,5 +1,6 @@
 package com.saurabh.ecommerce.order_service.controllers;
 
+import com.saurabh.ecommerce.order_service.config.FeaturesEnableConfig;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -20,13 +21,19 @@ import java.util.List;
 public class OrdersController {
 
     private final OrdersService orderService;
+    private final FeaturesEnableConfig featuresEnableConfig;
 
     @Value("${my.variable}")
     private String myVariable;
 
     @GetMapping("/currentProfile")
     public String currentProfile() {
-        return "current profile is: " + myVariable;
+        // return "current profile is: " + myVariable;
+        if (featuresEnableConfig.isUserTrackingEnabled()) {
+            return "User tracking enabled wohoo, my variable is: "+ myVariable;
+        } else {
+            return "User tracking disabled awww, my variable is: "+ myVariable;
+        }
     }
 
     @GetMapping("/helloOrders")
