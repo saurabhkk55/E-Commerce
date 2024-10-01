@@ -36,8 +36,9 @@ public class ProductController {
 //                .uri(orderService.getUri()+"/orders/core/helloOrders")
 //                .retrieve()
 //                .body(String.class);
+        Long userId = Long.valueOf(httpServletRequest.getHeader("X-User-Id"));
 
-        return ordersFeignClient.helloOrders();
+        return ordersFeignClient.helloOrders(userId);
     }
 
     @GetMapping

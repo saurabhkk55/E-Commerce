@@ -3,10 +3,9 @@ package com.saurabh.ecommerce.order_service.controllers;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-import com.saurabh.ecommerce.order_service.clients.InventoryOpenFeignClient;
 import com.saurabh.ecommerce.order_service.dto.OrderRequestDto;
 import com.saurabh.ecommerce.order_service.service.OrdersService;
 
@@ -20,9 +19,18 @@ public class OrdersController {
 
     private final OrdersService orderService;
 
+    @Value("${my.variable}")
+    private String myVariable;
+
+    @GetMapping("/currentProfile")
+    public String currentProfile() {
+        return "current profile is: " + myVariable;
+    }
+
     @GetMapping("/helloOrders")
-    public String helloOrders() {
-        return "Hello from Orders Service";
+    public String helloOrders(@RequestHeader("X-User-Id") Long userId) {
+
+        return "Hello from Orders Service, userId is: " + userId;
     }
 
     @PostMapping("/create-order")

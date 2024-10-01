@@ -7,7 +7,7 @@ spring:
         git:
           uri: https://github.com/saurabhkk55/ecommerce-config-server
           username: saurabhkk55
-          password: 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
+          password: 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
           default-label: main
 server:
   port: 8888
