@@ -30,8 +30,10 @@ public class OrdersController {
     public String currentProfile() {
         // return "current profile is: " + myVariable;
         if (featuresEnableConfig.isUserTrackingEnabled()) {
+            log.info("User tracking enabled wohoo, my variable is: {}", myVariable);
             return "User tracking enabled wohoo, my variable is: "+ myVariable;
         } else {
+            log.info("User tracking disabled awww, my variable is: {}", myVariable);
             return "User tracking disabled awww, my variable is: "+ myVariable;
         }
     }
