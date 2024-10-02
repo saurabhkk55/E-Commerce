@@ -153,3 +153,4 @@
 02-10-2024 15:35:36.441 [http-nio-9020-exec-1] [-] INFO  order-service-o.s.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
 02-10-2024 15:35:36.444 [http-nio-9020-exec-1] [-] INFO  order-service-o.s.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 2 ms
 02-10-2024 15:35:36.507 [http-nio-9020-exec-1] [66fd1aef37ef5c1e7c421c24da9789a7-af55538365ec898d] INFO  order-service-c.s.e.o.controllers.OrdersController.currentProfile - User tracking disabled awww, my variable is: order-github-dev-profile
+02-10-2024 15:39:40.519 [AsyncResolver-bootstrap-executor-%d] [-] INFO  order-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
