@@ -137,3 +137,4 @@
 02-10-2024 15:29:52.766 [http-nio-9010-exec-1] [-] INFO  inventory-service-o.s.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
 02-10-2024 15:29:52.768 [http-nio-9010-exec-1] [-] INFO  inventory-service-o.s.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 2 ms
 02-10-2024 15:29:52.816 [http-nio-9010-exec-1] [66fd1998019f0dc9a4afdbe2141846c5-793331cba733075c] INFO  inventory-service-c.s.e.i.controller.ProductController.fetchFromOrdersService - Saurabh
+02-10-2024 15:34:12.073 [AsyncResolver-bootstrap-executor-%d] [-] INFO  inventory-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
